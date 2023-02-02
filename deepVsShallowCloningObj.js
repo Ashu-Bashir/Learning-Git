@@ -15,3 +15,13 @@ const answer = arr.map((v) => {
         return shallowCopy;
       }
     });
+
+      const obj = { age:20, name: {realname : "mukesh"}};
+
+      const deepCopy = JSON.parse(JSON.stringify(obj));
+      // const shallowCopy = {...obj};
+
+      deepCopy.name = 25;
+      deepCopy.age.realname = "suresh";
+      console.log(" a" , obj);
+      console.log( "d", deepCopy);
